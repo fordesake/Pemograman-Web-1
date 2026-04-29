@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pendaftaran Kursus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            width: 600px;
+            border: 2px solid #333;
+            background-color: #808080;
+        }
+        .header {
+            background-color: #add8e6;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #333;
+        }
+        .header h1 {
+            color: red;
+            margin: 0;
+            font-size: 24pt;
+        }
+        .section-title {
+            background-color: #666;
+            color: white;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 18pt;
+            border-bottom: 1px solid #333;
+        }
+        .form-content {
+            padding: 20px;
+            color: black;
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            padding: 5px 0;
+            vertical-align: top;
+        }
+        .label-cell {
+            width: 180px;
+        }
+        input[type="text"], input[type="date"], select {
+            width: 200px;
+        }
+        .footer-section {
+            background-color: #f08080;
+            padding: 10px;
+            border-top: 2px solid #333;
+        }
+        .footer-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        textarea {
+            width: 95%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .buttons {
+            display: flex;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Pendaftaran Kursus</h1>
+        </div>
+        
+        <div class="section-title">Data Diri</div>
+        
+        <div class="form-content">
+            <form>
+                <table>
+                    <tr>
+                        <td class="label-cell">Nama</td>
+                        <td><input type="text" name="nama"></td>
+                    </tr>
+                    <tr>
+                        <td>Nim</td>
+                        <td><input type="text" name="nim" maxlength="9"></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail</td>
+                        <td><input type="text" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Lahir</td>
+                        <td><input type="date" name="tanggal_lahir"></td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Kelamin</td>
+                        <td>
+                            <input type="radio" name="jenis_kelamin" value="L"> Laki-laki<br>
+                            <input type="radio" name="jenis_kelamin" value="P"> Perempuan
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pilih Program Kursus</td>
+                        <td>
+                            <input type="checkbox" name="kursus" value="C#"> C#<br>
+                            <input type="checkbox" name="kursus" value="Java"> Java<br>
+                            <input type="checkbox" name="kursus" value="SQL"> SQL<br>
+                            <input type="checkbox" name="kursus" value="HTML PHP"> HTML dan PHP
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pilihan Hari/Jam Kursus</td>
+                        <td>
+                            <select name="jadwal">
+                                <option>Senin - Rabu/09.00 - 11.00</option>
+                                <option>Selasa - Kamis/13.00 - 15.00</option>
+                                <option>Sabtu - Minggu/08.00 - 10.00</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+        </div>
+
+        <div class="footer-section">
+            <div class="footer-title">Komentar Anda</div>
+            <textarea name="komentar"></textarea>
+            <div class="buttons">
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+                <input type="button" value="Cancel">
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
